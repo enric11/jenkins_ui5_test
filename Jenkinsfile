@@ -5,11 +5,11 @@ pipeline {
       parallel {
         stage('provisional') {
           steps {
-            sh 'npm'
+            sh 'NodeJS'
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             sh 'mbt build'
           }

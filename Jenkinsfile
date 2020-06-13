@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('provisional') {
       steps {
-        sh 'echo "Hello"'
+        sh 'npm -v'
       }
     }
 

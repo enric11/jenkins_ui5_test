@@ -15,7 +15,7 @@ pipeline {
 npm install babel-eslint --save-dev
 #eslint . --ext .js
 
-eslint -c config.eslintrc -f checkstyle . --ext .js > eslint.xml'''
+eslint -f checkstyle . --ext .js > eslint.xml'''
           }
         }
 

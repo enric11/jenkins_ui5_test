@@ -16,15 +16,7 @@ pipeline {
 
         stage('test rounting') {
           steps {
-            sh '''echo "----------- INIT ---------------"
-echo $PATH
-echo "--------------------------"
-echo ls
-echo "----------- SECOND ---------------"
-. ~/.nvm/nvm.sh
-echo $PATH
-echo "--------------------------"
-echo ls'''
+            sh 'ls'
           }
         }
 
@@ -33,9 +25,9 @@ echo ls'''
 
     stage('Version') {
       steps {
-        sh '''echo $PATH
-. ~/.nvm/nvm.sh
-npm -v'''
+        sh '''#echo $PATH
+#. ~/.nvm/nvm.sh
+#npm -v'''
       }
     }
 

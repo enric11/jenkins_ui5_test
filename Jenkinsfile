@@ -11,6 +11,7 @@ pipeline {
 #npm -v
 #echo $PATH
 '''
+            nodejs 'NodeJS'
           }
         }
 

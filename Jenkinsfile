@@ -30,5 +30,6 @@ cf install-plugin multiapps -f
   }
   environment {
     USER_CREDENTIALS = credentials('SAP_CF_DEV')
+    mtar_file = '*.mtar'
   }
 }

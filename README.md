@@ -33,9 +33,10 @@ https://developers.sap.com/tutorials/cp-cf-download-cli.html
 https://ecastella.com/activa-todos-los-comandos-del-cliente-cf/
 
 -Añadir credenciales a Jenkins para enmascarar login
+ Para leer desde blue ocean, hay que añadir el condigo con Ctrl + S
 
-- Para leer desde blue ocean, hay que añadir el condigo con Ctrl + S
-
+-AÑadir el login de CF:
+cf login -a https://api.cf.eu10.hana.ondemand.com -o xxxtrial -s dev -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW
 
 - Instalar ESLINT:
 sudo npm install -g eslint --unsafe-perm=true --allow-root

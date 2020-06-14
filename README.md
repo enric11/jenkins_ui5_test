@@ -20,15 +20,25 @@ https://linuxize.com/post/how-to-install-node-js-on-centos-7/
     Instalar plugin Jenkins: (opcional)
     https://plugins.jenkins.io/nodejs/
 
+- Instalar UI5
+npm install --global @ui5/cli
+
 
 - Instalar MBT para compilar:
 https://ecastella.com/deployando-una-aplicacion-en-cf-manualmente/
 sudo npm install -g mbt --unsafe-perm=true --allow-root
 
+- Instalar cliente CF + plugin MTA
+https://developers.sap.com/tutorials/cp-cf-download-cli.html
+https://ecastella.com/activa-todos-los-comandos-del-cliente-cf/
+
+-Añadir credenciales a Jenkins para enmascarar login
+
+- Para leer desde blue ocean, hay que añadir el condigo con Ctrl + S
+
+
 - Instalar ESLINT:
 sudo npm install -g eslint --unsafe-perm=true --allow-root
-
-
 
 Apuntes varios
 --

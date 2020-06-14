@@ -10,7 +10,7 @@ pipeline {
 #. ~/.nvm/nvm.sh
 #nvm install node
 npm -v
-#echo $PATH
+echo $PATH
 '''
           }
         }

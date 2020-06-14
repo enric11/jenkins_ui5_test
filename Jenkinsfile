@@ -16,10 +16,10 @@ pipeline {
 
         stage('test rounting') {
           steps {
-            sh '''. ~/.nvm/nvm.sh
-npm -v
-npm install -g mbt
-mbt -v
+            sh '''#. ~/.nvm/nvm.sh
+#npm -v
+#npm install -g mbt
+#mbt -v
 ls'''
           }
         }

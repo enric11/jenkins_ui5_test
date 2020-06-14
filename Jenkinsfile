@@ -16,6 +16,7 @@ npm install babel-eslint --save-dev
 #eslint . --ext .js
 
 eslint -f checkstyle . --ext .js > eslint.xml'''
+            recordIssues()
           }
         }
 

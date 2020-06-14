@@ -23,19 +23,8 @@ eslint -f checkstyle . --ext .js > eslint.xml'''
     }
 
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sh 'mbt build'
-          }
-        }
-
-        stage('Prepare information') {
-          steps {
-            recordIssues(aggregatingResults: true)
-          }
-        }
-
+      steps {
+        sh 'mbt build'
       }
     }
 

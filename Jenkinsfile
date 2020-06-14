@@ -32,7 +32,6 @@ eslint -f checkstyle . --ext .js > eslint.xml'''
 
         stage('Prepare information') {
           steps {
-            scanForIssues()
             recordIssues(aggregatingResults: true)
           }
         }

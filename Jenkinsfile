@@ -12,8 +12,8 @@ echo "$USER"
 #. ~/.nvm/nvm.sh
 #nvm install node
 #echo $PATH
-~/.nvm/versions/node/v14.4.0/bin/npm -v
-#npm -v
+#~/.nvm/versions/node/v14.4.0/bin/npm -v
+npm -v
 #echo $PATH
 '''
           }

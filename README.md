@@ -17,14 +17,16 @@ https://stackoverflow.com/questions/24114676/git-error-failed-to-push-some-refs-
 
 - Instalar NPM en la maquina de linux de AWS
 https://linuxize.com/post/how-to-install-node-js-on-centos-7/
+    Instalar plugin Jenkins: (opcional)
+    https://plugins.jenkins.io/nodejs/
+
 
 - Instalar MBT para compilar:
 https://ecastella.com/deployando-una-aplicacion-en-cf-manualmente/
 sudo npm install -g mbt --unsafe-perm=true --allow-root
 
-- Instalar plugin Jenkins:
-https://plugins.jenkins.io/nodejs/
-
+- Instalar ESLINT:
+sudo npm install -g eslint --unsafe-perm=true --allow-root
 
 
 

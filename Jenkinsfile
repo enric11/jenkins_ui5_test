@@ -15,7 +15,9 @@ pipeline {
 npm install babel-eslint --save-dev
 #eslint . --ext .js
 
-eslint -f checkstyle . --ext .js > eslint.xml'''
+eslint -f checkstyle . --ext .js > eslint.xml
+resultEsLint = eslint -f html . --ext .js'''
+            mail(subject: 'Result construction', body: '$resultEsLint', to: 'e_castella@hotmail.com')
           }
         }
 
@@ -44,5 +46,6 @@ cf install-plugin multiapps -f
   environment {
     USER_CREDENTIALS = credentials('SAP_CF_DEV')
     mtar_file = '*.mtar'
+    resultEsLint = ''
   }
 }

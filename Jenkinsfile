@@ -18,6 +18,7 @@ pipeline {
           steps {
             sh '''. ~/.nvm/nvm.sh
 npm -v
+npm install -g mbt
 mbt -v
 ls'''
           }

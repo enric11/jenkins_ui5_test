@@ -13,8 +13,9 @@ pipeline {
           steps {
             sh '''npm install @sap/eslint-plugin-ui5-jsdocs@latest --save-dev
 npm install babel-eslint --save-dev
-eslint . --ext .js
-'''
+#eslint . --ext .js
+
+eslint -c config.eslintrc -f checkstyle . --ext .js > eslint.xml'''
           }
         }
 

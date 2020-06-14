@@ -16,7 +16,8 @@ pipeline {
 
         stage('test rounting') {
           steps {
-            sh 'ls'
+            sh '''. ~/.nvm/nvm.sh
+ls'''
           }
         }
 

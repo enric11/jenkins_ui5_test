@@ -16,7 +16,6 @@ npm install babel-eslint --save-dev
 #eslint . --ext .js
 
 eslint -f checkstyle . --ext .js > eslint.xml'''
-            recordIssues()
           }
         }
 
@@ -24,8 +23,20 @@ eslint -f checkstyle . --ext .js > eslint.xml'''
     }
 
     stage('Build') {
-      steps {
-        sh 'mbt build'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'mbt build'
+          }
+        }
+
+        stage('Prepare information') {
+          steps {
+            scanForIssues()
+            recordIssues(aggregatingResults: true)
+          }
+        }
+
       }
     }
 

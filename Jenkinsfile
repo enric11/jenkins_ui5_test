@@ -11,13 +11,14 @@ pipeline {
 #npm -v
 #echo $PATH
 '''
-            nodejs 'NodeJS'
           }
         }
 
         stage('test rounting') {
           steps {
             sh '''. ~/.nvm/nvm.sh
+npm -v
+mbt -v
 ls'''
           }
         }

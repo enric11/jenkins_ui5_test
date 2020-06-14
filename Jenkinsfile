@@ -13,7 +13,7 @@ echo "$USER"
 #nvm install node
 #echo $PATH
 #~/.nvm/versions/node/v14.4.0/bin/npm -v
-npm -v
+#npm -v
 #echo $PATH
 '''
           }
@@ -21,8 +21,8 @@ npm -v
 
         stage('test rounting') {
           steps {
-            sh '''#. ~/.nvm/nvm.sh
-#npm -v
+            sh '''. ~/.nvm/nvm.sh
+npm -v
 #npm install -g mbt
 #mbt -v
 ls'''
@@ -35,9 +35,9 @@ ls'''
     stage('Version') {
       steps {
         sh '''#echo $PATH
-. ~/.nvm/nvm.sh
+#. ~/.nvm/nvm.sh
 npm -v
-mbt -v'''
+#mbt -v'''
       }
     }
 

@@ -30,8 +30,9 @@ ls'''
     stage('Version') {
       steps {
         sh '''#echo $PATH
-#. ~/.nvm/nvm.sh
-npm -v'''
+. ~/.nvm/nvm.sh
+npm -v
+mbt -v'''
       }
     }
 

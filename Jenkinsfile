@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('error') {
           steps {
-            sh '''#echo $PATH
+            sh '''echo $PATH
 #PATH=$PATH:/home/ec2-user/.nvm/versions/node/v14.4.0/bin:/usr/local/jdk-11.0.1/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
 #curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 #. ~/.nvm/nvm.sh

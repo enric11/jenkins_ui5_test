@@ -21,12 +21,18 @@ resultEsLint=$(eslint -f html . --ext .js)'''
           }
         }
 
+        stage('Check deploy') {
+          steps {
+            sh 'cf check-before-deploy -file mta.yaml -all'
+          }
+        }
+
       }
     }
 
     stage('Build') {
       steps {
-        sh 'mbt build'
+        sh '#mbt build'
       }
     }
 

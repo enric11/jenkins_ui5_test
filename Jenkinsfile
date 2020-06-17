@@ -16,7 +16,7 @@ npm install babel-eslint --save-dev
 #eslint . --ext .js
 
 eslint -f checkstyle . --ext .js > eslint.xml
-resultEsLint=$(eslint -f html . --ext .js)'''
+#resultEsLint=$(eslint -f html . --ext .js)'''
           }
         }
 

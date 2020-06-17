@@ -37,7 +37,7 @@ cf install-plugin multiapps -f
         sh '''cf login -a https://api.cf.eu10.hana.ondemand.com -o 57888edctrial -s dev -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW
 '''
         sh 'mtar_file=$(basename mta_archives/*)'
-        sh 'cf deploy mta_archives/$mtar_file'
+        sh '#cf deploy mta_archives/$mtar_file'
       }
     }
 

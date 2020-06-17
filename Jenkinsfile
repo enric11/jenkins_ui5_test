@@ -17,13 +17,6 @@ npm install babel-eslint --save-dev
 
 eslint -f checkstyle . --ext .js > eslint.xml
 resultEsLint=$(eslint -f html . --ext .js)'''
-            mail(subject: 'Result construction', body: '$resultEsLint', to: 'e_castella@hotmail.com')
-          }
-        }
-
-        stage('Check deploy') {
-          steps {
-            sh 'cf check-before-deploy -file mta.yaml -all'
           }
         }
 
@@ -36,7 +29,7 @@ resultEsLint=$(eslint -f html . --ext .js)'''
       }
     }
 
-    stage('Deploy') {
+    stage('Prepare for deploy') {
       steps {
         sh '''cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
 cf install-plugin multiapps -f
@@ -44,7 +37,19 @@ cf install-plugin multiapps -f
         sh '''cf login -a https://api.cf.eu10.hana.ondemand.com -o 57888edctrial -s dev -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW
 '''
         sh 'mtar_file=$(basename mta_archives/*)'
-        sh '#cf deploy mta_archives/$mtar_file'
+        sh 'cf deploy mta_archives/$mtar_file'
+      }
+    }
+
+    stage('Check deploy') {
+      steps {
+        sh 'cf check-before-deploy -file mta.yaml -all'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'cf deploy mta_archives/$mtar_file'
       }
     }
 

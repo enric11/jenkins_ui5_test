@@ -25,7 +25,7 @@ resultEsLint=$(eslint -f html . --ext .js)'''
 
     stage('Build') {
       steps {
-        sh '#mbt build'
+        sh 'mbt build'
       }
     }
 

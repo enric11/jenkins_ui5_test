@@ -41,6 +41,12 @@ cf login -a https://api.cf.eu10.hana.ondemand.com -o xxxtrial -s dev -u $USER_CR
 - Instalar ESLINT:
 sudo npm install -g eslint --unsafe-perm=true --allow-root
 
+- Instalar plugins check before deploy (por consola)
+sudo su -s /bin/bash jenkins
+cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+cf install-plugin check-before-deploy -f
+
+
 Apuntes varios
 --
 Para lanzarlo a CF, ejecutar primer mbt build y despues cf deploy o push.

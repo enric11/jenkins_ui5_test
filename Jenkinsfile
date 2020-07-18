@@ -22,7 +22,8 @@ eslint -f checkstyle . --ext .js > eslint.xml
 
         stage('Qunit UI5') {
           steps {
-            sh 'npm test'
+            sh '''npm install
+npm test'''
           }
         }
 

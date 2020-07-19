@@ -48,6 +48,12 @@ cf install-plugin check-before-deploy -f
 
 - Instalar librerias Karma + chrome sin GNU
 sudo npm install chromium
+export CHROME_BIN=/usr/bin/chromium-browser
+
+---- Alternativa ----
+sudo npm install puppeteer --unsafe-perm=true --allow-root
+
+---------------------
 
 se pone npm install o manualmente
 sudo npm install --global karma-cli

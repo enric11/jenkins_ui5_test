@@ -23,8 +23,8 @@ pipeline {
         stage('Qunit UI5') {
           steps {
             sh '''npm install
-npm install puppeteer --unsafe-perm=true
-export CHROMIUM_BIN=/usr/bin/chromium-browser
+#npm install puppeteer --unsafe-perm=true
+#export CHROMIUM_BIN=/usr/bin/chromium-browser
 npm test'''
           }
         }

@@ -32,31 +32,31 @@ npm test'''
 
     stage('Build') {
       steps {
-        sh 'mbt build'
+        sh '#mbt build'
       }
     }
 
     stage('Prepare for deploy') {
       steps {
-        sh '''cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
-cf install-plugin multiapps -f
+        sh '''#cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+#cf install-plugin multiapps -f
 '''
-        sh '''cf login -a https://api.cf.eu10.hana.ondemand.com -o 57888edctrial -s dev -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW
+        sh '''#cf login -a https://api.cf.eu10.hana.ondemand.com -o 57888edctrial -s dev -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW
 '''
-        sh 'mtar_file=$(basename mta_archives/*)'
-        sh '#cf deploy mta_archives/$mtar_file'
+        sh '#mtar_file=$(basename mta_archives/*)'
+        sh '##cf deploy mta_archives/$mtar_file'
       }
     }
 
     stage('Check deploy') {
       steps {
-        sh 'cf check-before-deploy -file mta.yaml -all'
+        sh '#cf check-before-deploy -file mta.yaml -all'
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'cf deploy mta_archives/$mtar_file'
+        sh '#cf deploy mta_archives/$mtar_file'
       }
     }
 

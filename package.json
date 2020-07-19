@@ -1,13 +1,30 @@
 {
   "name": "MyApplication",
   "version": "0.0.1",
+  "scripts": {
+		"start": "ui5 serve",
+		"lint": "eslint webapp",
+		"karma": "karma start",
+		"karma-ci": "karma start karma-ci.conf.js",
+		"watch": "npm run karma",
+		"test": "npm run karma-ci",
+		"test_backup": "rimraf coverage && karma start karma-ci.conf.js",
+		"build": "ui5 build -a --clean-dest",
+		"build-self-contained": "ui5 build self-contained -a --clean-dest",
+		"buildui": "ui5 build --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
+		"serve-dist": "ws --compress -d dist"
+  },
   "devDependencies": {
     "@sap/ui5-builder-webide-extension": "1.0.x",
     "eslint": "5.16.x",
-    "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
     "@sapui5/ts-types": "1.71.x",
     "bestzip": "2.1.4",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "karma": "^4.4.1",
+	"karma-chrome-launcher": "^3.1.0",
+	"karma-coverage": "^2.0.2",
+	"karma-ui5": "^2.2.0",
+	"local-web-server": "^3.0.7"
   },
   "ui5": {
     "dependencies": [

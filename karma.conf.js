@@ -2,7 +2,15 @@ module.exports = function(config) {
 	"use strict";
 
 	var chromeFlags = [
-		"--window-size=1280,1024"
+		  "--no-sandbox",
+          "--remote-debugging-port=9222",
+          "--enable-logging",
+          "--user-data-dir=./karma-chrome",
+          "--v=1",
+          "--disable-background-timer-throttling",
+          "--disable-renderer-backgrounding",
+          "--proxy-bypass-list=*",
+          "--proxy-server=\'direct://\'"
 	];
 
 	config.set({
@@ -74,7 +82,7 @@ module.exports = function(config) {
 				flags: chromeFlags
 			},
 			CustomChromeHeadless: {
-				base: "ChromeHeadless",
+				base: "ChromiumHeadless",
 				flags: chromeFlags
 			}
 		},

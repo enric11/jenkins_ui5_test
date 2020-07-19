@@ -16,11 +16,12 @@ module.exports = function(config) {
 		},
 		
 		/********/
-		//basePath : '',
+		/*basePath : '',
 		openui5: {
             path: 'https://sapui5.hana.ondemand.com/1.40.12/resources/sap-ui-core.js',
             useMockServer: false
         },
+        
 		        // How the client should execute the test, like run in an iframe, capture the console and so on.
         client: {
             captureConsole: true,
@@ -51,6 +52,7 @@ module.exports = function(config) {
                 }
             }
         },
+        */
 		files: [
 
   // Detailed pattern to include a file. Similarly other options can be used

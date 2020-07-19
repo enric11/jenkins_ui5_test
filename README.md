@@ -52,7 +52,7 @@ export CHROME_BIN=/usr/bin/chromium-browser
 
 ---- Alternativa ----
 sudo npm install puppeteer --unsafe-perm=true --allow-root
-
+npm install puppeteer --unsafe-perm=true
 ---------------------
 
 se pone npm install o manualmente

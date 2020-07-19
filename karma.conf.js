@@ -16,7 +16,7 @@ module.exports = function(config) {
 		},
 		
 		/********/
-		basePath : '',
+		//basePath : '',
 		openui5: {
             path: 'https://sapui5.hana.ondemand.com/1.40.12/resources/sap-ui-core.js',
             useMockServer: false

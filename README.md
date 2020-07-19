@@ -46,7 +46,10 @@ sudo su -s /bin/bash jenkins
 cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
 cf install-plugin check-before-deploy -f
 
-- Instalar librerias Karma
+- Instalar librerias Karma + chrome sin GNU
+sudo npm install chromium
+
+se pone npm install o manualmente
 sudo npm install --global karma-cli
 sudo npm install karma
 sudo npm install karma-ui5

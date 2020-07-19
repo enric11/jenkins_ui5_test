@@ -5,12 +5,11 @@ module.exports = function(config) {
 	config.set({
 
 		preprocessors: {
-//			"{webapp,webapp/!(test)}/*.js": ["coverage"]
-			"{webapp,webapp/!(test)}/*.js": [""]
+			"{webapp,webapp/!(test)}/*.js": ["coverage"]
 		},
 
 		coverageReporter: {
-			includeAllSources: false,
+			includeAllSources: true,
 			reporters: [
 				{
 					type: "html",
@@ -30,9 +29,9 @@ module.exports = function(config) {
 			}
 		},
 
-		reporters: ["progress"],
+		reporters: ["progress", "coverage"],
 
-		browsers: ["CustomChromeHeadless"],
+		browsers: ["PhantomJS"],
 
 		singleRun: true
 

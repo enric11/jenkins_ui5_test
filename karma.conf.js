@@ -20,7 +20,7 @@ module.exports = function(config) {
 
 		frameworks: ["ui5"],
 
-		browsers: ["ChromeHeadless"],
+		browsers: ["PhantomJS"],
 
 		browserConsoleLogOptions: {
 			level: "error"
@@ -86,6 +86,10 @@ module.exports = function(config) {
 			},
 			CustomChromeHeadless: {
 				base: "ChromiumHeadless",
+				flags: chromeFlags
+			},
+			PhantomJS:{
+				base: "PhantomJS",
 				flags: chromeFlags
 			}
 		},

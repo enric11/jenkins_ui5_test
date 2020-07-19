@@ -5,7 +5,8 @@ module.exports = function(config) {
 	config.set({
 
 		preprocessors: {
-			"{webapp,webapp/!(test)}/*.js": ["coverage"]
+//			"{webapp,webapp/!(test)}/*.js": ["coverage"]
+			"{webapp,webapp/!(test)}/*.js": [""]
 		},
 
 		coverageReporter: {
@@ -29,7 +30,7 @@ module.exports = function(config) {
 			}
 		},
 
-		reporters: ["progress", "coverage"],
+		reporters: ["progress"],
 
 		browsers: ["CustomChromeHeadless"],
 

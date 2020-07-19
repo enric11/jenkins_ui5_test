@@ -19,7 +19,7 @@ module.exports = function(config) {
 			url: "https://openui5.hana.ondemand.com",
             type: "application",
                 paths: {
-                    webapp: "webapp/"
+                    webapp: "HTML5Module/webapp/"
                 }
 		},
 		

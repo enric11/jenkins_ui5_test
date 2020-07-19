@@ -24,7 +24,7 @@ pipeline {
           steps {
             sh '''npm install
 npm install puppeteer --unsafe-perm=true
-CHROMIUM_BIN=/usr/bin/chromium-browser
+export CHROMIUM_BIN=/usr/bin/chromium-browser
 npm test'''
           }
         }

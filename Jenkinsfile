@@ -11,12 +11,12 @@ pipeline {
 
         stage('Eslint JS ui5') {
           steps {
-            sh '''npm install @sap/eslint-plugin-ui5-jsdocs@latest --save-dev
-npm install babel-eslint --save-dev
-#eslint . --ext .js
+            sh '''#npm install @sap/eslint-plugin-ui5-jsdocs@latest --save-dev
+#npm install babel-eslint --save-dev
+##eslint . --ext .js
 
-eslint -f checkstyle . --ext .js > eslint.xml
-#resultEsLint=$(eslint -f html . --ext .js)'''
+#eslint -f checkstyle . --ext .js > eslint.xml
+##resultEsLint=$(eslint -f html . --ext .js)'''
           }
         }
 

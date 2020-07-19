@@ -17,7 +17,7 @@ module.exports = function(config) {
 
 		frameworks: ["ui5"],
 
-		browsers: ['PhantomJS', 'PhantomJS_custom'],
+		browsers: ['ChromeHeadless'],
 
 		browserConsoleLogOptions: {
 			level: "error"
@@ -76,24 +76,23 @@ module.exports = function(config) {
 ],
 		*/
 
-    // you can define custom flags
-    customLaunchers: {
-      'PhantomJS_custom': {
-        base: 'PhantomJS',
-        options: {
-          windowName: 'my-window',
-          settings: {
-            webSecurityEnabled: false
-          },
-        },
-        flags: ['--load-images=true'],
-        debug: true
-      }
-    },
-     phantomjsLauncher: {
-      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-      exitOnResourceError: true
-    }
+		files: [
+
+  // Detailed pattern to include a file. Similarly other options can be used
+  { pattern: 'i18n/i18n_es_ES.properties', watched: false },
+],
+		/*******/
+
+		customLaunchers: {
+			CustomChrome: {
+				base: "Chrome",
+				flags: chromeFlags
+			},
+			CustomChromeHeadless: {
+				base: "ChromeHeadless",
+				flags: chromeFlags
+			}
+		},
 
 	});
 };

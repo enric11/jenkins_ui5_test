@@ -15,6 +15,14 @@ module.exports = function(config) {
 			level: "error"
 		},
 		
+		ui5: {
+			url: "https://openui5.hana.ondemand.com",
+            type: "application",
+                paths: {
+                    webapp: "webapp/"
+                }
+		},
+		
 		/********/
 		/*basePath : '',
 		openui5: {

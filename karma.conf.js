@@ -52,13 +52,13 @@ module.exports = function(config) {
                 }
             }
         },
-        */
+        
 		files: [
 
   // Detailed pattern to include a file. Similarly other options can be used
   { pattern: 'i18n/i18n_es_ES.properties', watched: false },
 ],
-		/*******/
+		*/
 
 		customLaunchers: {
 			CustomChrome: {

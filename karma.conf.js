@@ -90,7 +90,7 @@ module.exports = function(config) {
 			},
 			PhantomJS:{
 				base: "PhantomJS",
-				flags: chromeFlags
+			//	flags: chromeFlags
 			}
 		},
 

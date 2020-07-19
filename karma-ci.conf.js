@@ -10,7 +10,7 @@ module.exports = function(config) {
 		},
 
 		coverageReporter: {
-			includeAllSources: true,
+			includeAllSources: false,
 			reporters: [
 				{
 					type: "html",

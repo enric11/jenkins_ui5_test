@@ -23,6 +23,7 @@ pipeline {
         stage('Qunit UI5') {
           steps {
             sh '''npm install
+npm install puppeteer --unsafe-perm=true
 npm test'''
           }
         }

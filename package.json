@@ -18,7 +18,7 @@
     "@sap/ui5-builder-webide-extension": "1.0.x",
     "eslint": "5.16.x",
     "@sapui5/ts-types": "1.71.x",
-    "bestzip": "2.1.4",
+    "bestzip": "2.1.7",
     "rimraf": "3.0.2",
     "karma": "^4.4.1",
 	"karma-chrome-launcher": "^3.1.0",
